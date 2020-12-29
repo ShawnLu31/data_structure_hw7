@@ -103,33 +103,40 @@ struct List
 };
 ```
 * ## Create adjacency list
-1. find the starting vertex and ending vertex of the gragh.
+```find the starting vertex and ending vertex of the gragh.```
 ### adjacency list
-i from starting vertex to ending vertex    
-if starting-_v of edges[i]  == i  
-{  
-put the ending_v and weight of edges[i] in list  
-list[ending_v].count + 1;  
-}
-
+```
+for i from starting vertex to ending vertex    
+  if starting-_v of edges[i]  == i  
+  {  
+    put the ending_v and weight of edges[i] in list  
+    list[ending_v].count + 1;  
+  }
+```
 ### inverted adjacency list
-i from ending vertex to starting vertex    
-if endting-_v of edges[i]  == i  
-{  
-put the starting_v and weight of edges[i] in list  
-list[starting_v].count + 1;  
-}
+```
+for i from ending vertex to starting vertex    
+  if endting-_v of edges[i]  == i  
+  {  
+    put the starting_v and weight of edges[i] in list  
+    list[starting_v].count + 1;  
+  }
+```
 * ## Calculate early-late time
 ### Calculate the earliest time of vertexs
+Set every earliset time of vertexs 0.  
 Use adjacency list(early_list) to calulate earliset time of vertexs.
 * e.g.  
+![image](https://github.com/ShawnLu31/data_structure_hw7/blob/main/early_v.jpg)
 ### Calculate the earliest time of edges
 Use earliset time of vertex to calculate earliset time of edges.
 * e.g.  
 ![image](https://github.com/ShawnLu31/data_structure_hw7/blob/main/early.PNG)
 ### Calculate the latest time of vertexs 
+Set every latest time of vertexs the maximum of early_v.  
 Use inverted adjacency list(late_list) to calcute latest time of vertexs.
 * e.g.  
+![image](https://github.com/ShawnLu31/data_structure_hw7/blob/main/late_v.jpg)
 ### Calculate the latest time of edges
 Use latest time of vertexs to calculate latest time of edges.
 * e.g.  
