@@ -40,6 +40,7 @@
     + Edge e[]: the information of edges.
     + int num_edge: the number of edges.
   * Return Value
+    + return the number of vertexs.
 ### Calulate the earliest time
 * `void CalEarly(List list[], Edge e[], int early_v[], int early[], int num_v, int num_edge)`  
     Calculate the earliest time of vertexs.  
@@ -121,14 +122,18 @@ list[starting_v].count + 1;
 * ## Calculate early-late time
 ### Calculate the earliest time of vertexs
 Use adjacency list(early_list) to calulate earliset time of vertexs.
+* e.g.  
 ### Calculate the earliest time of edges
 Use earliset time of vertex to calculate earliset time of edges.
-* 
+* e.g.  
+![image](https://github.com/ShawnLu31/data_structure_hw7/blob/main/early.PNG)
 ### Calculate the latest time of vertexs 
 Use inverted adjacency list(late_list) to calcute latest time of vertexs.
+* e.g.  
 ### Calculate the latest time of edges
 Use latest time of vertexs to calculate latest time of edges.
-* 
-* ### Find critical paths
+* e.g.  
+![image](https://github.com/ShawnLu31/data_structure_hw7/blob/main/late.PNG)
+* ## Find critical paths
 if the early time of the edge i is equal to the late time of the edge i,  
 the edge i is on critical path.
